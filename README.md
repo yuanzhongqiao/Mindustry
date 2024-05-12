@@ -1,68 +1,52 @@
-![Logo](core/assets-raw/sprites/ui/logo.png)
-
-[![Build Status](https://github.com/Anuken/Mindustry/workflows/Tests/badge.svg?event=push)](https://github.com/Anuken/Mindustry/actions)
-[![Discord](https://img.shields.io/discord/391020510269669376.svg?logo=discord&logoColor=white&logoWidth=20&labelColor=7289DA&label=Discord&color=17cf48)](https://discord.gg/mindustry)  
-
-The automation tower defense RTS, written in Java.
-
-_[Trello Board](https://trello.com/b/aE2tcUwF/mindustry-40-plans)_  
-_[Wiki](https://mindustrygame.github.io/wiki)_  
-_[Javadoc](https://mindustrygame.github.io/docs/)_ 
-
-## Contributing
-
-See [CONTRIBUTING](CONTRIBUTING.md).
-
-## Building
-
-Bleeding-edge builds are generated automatically for every commit. You can see them [here](https://github.com/Anuken/MindustryBuilds/releases).
-
-If you'd rather compile on your own, follow these instructions.
-First, make sure you have [JDK 16-17](https://adoptium.net/archive.html?variant=openjdk17&jvmVariant=hotspot) installed. **Other JDK versions will not work.** Open a terminal in the Mindustry directory and run the following commands:
-
-### Windows
-
-_Running:_ `gradlew desktop:run`  
-_Building:_ `gradlew desktop:dist`  
-_Sprite Packing:_ `gradlew tools:pack`
-
-### Linux/Mac OS
-
-_Running:_ `./gradlew desktop:run`  
-_Building:_ `./gradlew desktop:dist`  
-_Sprite Packing:_ `./gradlew tools:pack`
-
-### Server
-
-Server builds are bundled with each released build (in Releases). If you'd rather compile on your own, replace 'desktop' with 'server', e.g. `gradlew server:dist`.
-
-### Android
-
-1. Install the Android SDK [here.](https://developer.android.com/studio#command-tools) Make sure you're downloading the "Command line tools only", as Android Studio is not required.
-2. In the unzipped Android SDK folder, find the cmdline-tools directory. Then create a folder inside of it called `latest` and put all of its contents into the newly created folder.
-3. In the same directory run the command `sdkmanager --licenses` (or `./sdkmanager --licenses` if on linux/mac)
-4. Set the `ANDROID_HOME` environment variable to point to your unzipped Android SDK directory.
-5. Enable developer mode on your device/emulator. If you are on testing on a phone you can follow [these instructions](https://developer.android.com/studio/command-line/adb#Enabling), otherwise you need to google how to enable your emulator's developer mode specifically.
-6. Run `gradlew android:assembleDebug` (or `./gradlew` if on linux/mac). This will create an unsigned APK in `android/build/outputs/apk`.
-
-To debug the application on a connected device/emulator, run `gradlew android:installDebug android:run`.
-
-### Troubleshooting
-
-#### Permission Denied
-
-If the terminal returns `Permission denied` or `Command not found` on Mac/Linux, run `chmod +x ./gradlew` before running `./gradlew`. *This is a one-time procedure.*
-
----
-
-Gradle may take up to several minutes to download files. Be patient. <br>
-After building, the output .JAR file should be in `/desktop/build/libs/Mindustry.jar` for desktop builds, and in `/server/build/libs/server-release.jar` for server builds.
-
-## Feature Requests
-
-Post feature requests and feedback [here](https://github.com/Anuken/Mindustry-Suggestions/issues/new/choose).
-
-## Downloads
-
-| [![](https://static.itch.io/images/badge.svg)](https://anuke.itch.io/mindustry)    |    [![](https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png)](https://play.google.com/store/apps/details?id=io.anuke.mindustry)   |    [![](https://fdroid.gitlab.io/artwork/badge/get-it-on.png)](https://f-droid.org/packages/io.anuke.mindustry)	| [![](https://flathub.org/assets/badges/flathub-badge-en.svg)](https://flathub.org/apps/details/com.github.Anuken.Mindustry)  
-|---	|---	|---	|---	|
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><p dir="auto"><a target="_blank" rel="noopener noreferrer" href="/Anuken/Mindustry/blob/master/core/assets-raw/sprites/ui/logo.png"><img src="/Anuken/Mindustry/raw/master/core/assets-raw/sprites/ui/logo.png" alt="标识" style="max-width: 100%;"></a></p>
+<p dir="auto"><a href="https://github.com/Anuken/Mindustry/actions"><img src="https://github.com/Anuken/Mindustry/workflows/Tests/badge.svg?event=push" alt="构建状态" style="max-width: 100%;"></a>
+<a href="https://discord.gg/mindustry" rel="nofollow"><img src="https://camo.githubusercontent.com/b8bf672ed1b4c62513157cae9b4a04d203c5e676af096fdd6361348537f877ed/68747470733a2f2f696d672e736869656c64732e696f2f646973636f72642f3339313032303531303236393636393337362e7376673f6c6f676f3d646973636f7264266c6f676f436f6c6f723d7768697465266c6f676f57696474683d3230266c6162656c436f6c6f723d373238394441266c6162656c3d446973636f726426636f6c6f723d313763663438" alt="不和谐" data-canonical-src="https://img.shields.io/discord/391020510269669376.svg?logo=discord&amp;logoColor=white&amp;logoWidth=20&amp;labelColor=7289DA&amp;label=Discord&amp;color=17cf48" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用 Java 编写的自动化塔防 RTS。</font></font></p>
+<p dir="auto"><em><a href="https://trello.com/b/aE2tcUwF/mindustry-40-plans" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trello Board </font></font></a></em><br>
+<em><a href="https://mindustrygame.github.io/wiki" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wiki </font></font></a></em><br>
+<em><a href="https://mindustrygame.github.io/docs/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Javadoc</font></font></a></em></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></h2><a id="user-content-contributing" class="anchor" aria-label="永久链接：贡献" href="#contributing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请参阅</font></font><a href="/Anuken/Mindustry/blob/master/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">建筑</font></font></h2><a id="user-content-building" class="anchor" aria-label="永久链接： 建筑" href="#building"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">每次提交都会自动生成前沿构建。您可以</font></font><a href="https://github.com/Anuken/MindustryBuilds/releases"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在这里</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">看到它们。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想自己编译，请按照以下说明进行操作。首先，确保安装了</font></font><a href="https://adoptium.net/archive.html?variant=openjdk17&amp;jvmVariant=hotspot" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">JDK 16-17</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他 JDK 版本将无法工作。</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Mindustry 目录中打开终端并运行以下命令：</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">视窗</font></font></h3><a id="user-content-windows" class="anchor" aria-label="永久链接：Windows" href="#windows"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行：</font></font></em> <code>gradlew desktop:run</code><br>
+<em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建：</font></font></em> <code>gradlew desktop:dist</code><br>
+<em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精灵包装：</font></font></em> <code>gradlew tools:pack</code></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Linux/Mac操作系统</font></font></h3><a id="user-content-linuxmac-os" class="anchor" aria-label="永久链接：Linux/Mac 操作系统" href="#linuxmac-os"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行：</font></font></em> <code>./gradlew desktop:run</code><br>
+<em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建：</font></font></em> <code>./gradlew desktop:dist</code><br>
+<em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精灵包装：</font></font></em> <code>./gradlew tools:pack</code></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">服务器</font></font></h3><a id="user-content-server" class="anchor" aria-label="永久链接：服务器" href="#server"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">服务器版本与每个已发布的版本（在版本中）捆绑在一起。如果您想自己编译，请将“桌面”替换为“服务器”，例如</font></font><code>gradlew server:dist</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安卓</font></font></h3><a id="user-content-android" class="anchor" aria-label="固定链接：安卓" href="#android"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在这里安装 Android SDK </font></font><a href="https://developer.android.com/studio#command-tools" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">确保您下载的是“仅限命令行工具”，因为不需要 Android Studio。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在解压后的Android SDK文件夹中，找到cmdline-tools目录。然后在其中创建一个名为 的文件夹</font></font><code>latest</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，并将其所有内容放入新创建的文件夹中。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在同一目录中运行命令</font></font><code>sdkmanager --licenses</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（或者</font></font><code>./sdkmanager --licenses</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果在 linux/mac 上）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">将环境变量设置</font></font><code>ANDROID_HOME</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为指向解压后的 Android SDK 目录。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在您的设备/模拟器上启用开发人员模式。如果您在手机上进行测试，则可以按照</font></font><a href="https://developer.android.com/studio/command-line/adb#Enabling" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这些说明</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">进行操作，否则您需要专门搜索如何启用模拟器的开发人员模式。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行</font></font><code>gradlew android:assembleDebug</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（或者</font></font><code>./gradlew</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果在 linux/mac 上）。这将创建一个未签名的 APK </font></font><code>android/build/outputs/apk</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+</ol>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要在连接的设备/模拟器上调试应用程序，请运行</font></font><code>gradlew android:installDebug android:run</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">.</font></font></p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">故障排除</font></font></h3><a id="user-content-troubleshooting" class="anchor" aria-label="永久链接：故障排除" href="#troubleshooting"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h4 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">没有权限</font></font></h4><a id="user-content-permission-denied" class="anchor" aria-label="永久链接：权限被拒绝" href="#permission-denied"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果终端返回</font></font><code>Permission denied</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或</font></font><code>Command not found</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在 Mac/Linux 上，请</font></font><code>chmod +x ./gradlew</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在运行 之前运行</font></font><code>./gradlew</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是一次性程序。</font></font></em></p>
+<hr>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gradle 可能需要长达几分钟的时间来下载文件。要有耐心。</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+构建后，输出 .JAR 文件应该用于</font></font><code>/desktop/build/libs/Mindustry.jar</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">桌面构建，以及</font></font><code>/server/build/libs/server-release.jar</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于服务器构建。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">功能请求</font></font></h2><a id="user-content-feature-requests" class="anchor" aria-label="永久链接：功能请求" href="#feature-requests"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://github.com/Anuken/Mindustry-Suggestions/issues/new/choose"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在此</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布功能请求和反馈</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下载</font></font></h2><a id="user-content-downloads" class="anchor" aria-label="永久链接：下载" href="#downloads"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<table>
+<thead>
+<tr>
+<th><a href="https://anuke.itch.io/mindustry" rel="nofollow"><img src="https://camo.githubusercontent.com/636ed8c35e22dd6e5a161330fbf3672efb824ccec844ee20a2b8204089d11b8c/68747470733a2f2f7374617469632e697463682e696f2f696d616765732f62616467652e737667" alt="" data-canonical-src="https://static.itch.io/images/badge.svg" style="max-width: 100%;"></a></th>
+<th><a href="https://play.google.com/store/apps/details?id=io.anuke.mindustry" rel="nofollow"><img src="https://camo.githubusercontent.com/b7c355557ebfc69c16957749e0e505786b6961aca66ec502c2766712c8c3951f/68747470733a2f2f706c61792e676f6f676c652e636f6d2f696e746c2f656e5f75732f6261646765732f696d616765732f67656e657269632f656e2d706c61792d62616467652e706e67" alt="" data-canonical-src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" style="max-width: 100%;"></a></th>
+<th><a href="https://f-droid.org/packages/io.anuke.mindustry" rel="nofollow"><img src="https://camo.githubusercontent.com/f422f6f830e814ec7e766de8fef4db949c6add75a9d58548ab2f5d29855c0616/68747470733a2f2f6664726f69642e6769746c61622e696f2f617274776f726b2f62616467652f6765742d69742d6f6e2e706e67" alt="" data-canonical-src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" style="max-width: 100%;"></a></th>
+<th><a href="https://flathub.org/apps/details/com.github.Anuken.Mindustry" rel="nofollow"><img src="https://camo.githubusercontent.com/7cf7a61bffaa52435746d8e79ef2cdb630abd9da6d32c9104f5db666030bc24e/68747470733a2f2f666c61746875622e6f72672f6173736574732f6261646765732f666c61746875622d62616467652d656e2e737667" alt="" data-canonical-src="https://flathub.org/assets/badges/flathub-badge-en.svg" style="max-width: 100%;"></a></th>
+</tr>
+</thead>
+</table>
+</article></div>
